@@ -54,7 +54,6 @@ int main()
                             InvalidString = !validate_input(arr[i], symbols_size);
                         }
                         while (InvalidString);
-                        i++;
                     }
                     print_array(address, lines_size, "\nBy hands array before sorting:");
                     break;
@@ -80,6 +79,7 @@ int main()
         printf("2 - Ascending sorting\n");
         int sorting = 0;
         sorting = getch();
+
         do
         {
             switch (sorting)
@@ -97,8 +97,8 @@ int main()
                     printf("Invalid input\nYou can only choose between 1 and 2\n");
                     setTextColor(7);
             }
-            while (getchar() != '\n');
-            sorting = getch();
+            /*while (getchar() != '\n');
+            sorting = getch();*/
         }
         while (sorting != 49 && sorting != 50);
         printf("To restart the program press ");
@@ -106,6 +106,7 @@ int main()
         printf("ENTER");
         setTextColor(7);
         printf(", otherwise press any key to exit\n");
+        while (getchar() != '\n');
     }
     while (getch() == 13);
     return 0;

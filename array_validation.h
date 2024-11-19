@@ -15,7 +15,7 @@ int validate_integer_value(const char *message)
     printf("%s\n", message);
     do
     {
-        if (scanf("%d", &value) != 1 || value < 0)
+        if (scanf("%d", &value) != 1 || value < 1)
         {
             setTextColor(12);
             printf("Enter a positive integer value\n");
